@@ -11,15 +11,15 @@ executors:
       - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
       
 workflows:
-    example-workflow:
+    practice-workflow:
       jobs:
         - cypress/run:
+            name: Test UI on chrome 
             command: npm run test:chrome
             record: true 
+            parallel: true 
+            parallelism: 2 
             browser: chrome              
             store_artifacts: false 
-            yarn: false 
-            attach-workspace: false 
-            no-workspace: false 
             executor: with-chrome       
 

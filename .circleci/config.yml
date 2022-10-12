@@ -19,6 +19,8 @@ jobs:
     steps:
       - cypress/setup:
           build: buil-1
+          command: npm run test:chrome
+          
 
           
 workflows:

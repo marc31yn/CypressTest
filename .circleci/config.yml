@@ -13,7 +13,6 @@ executors:
 workflows:
   build:
     jobs:
-      name: 'Practice'
       - cypress/run:
           command: npm run test:chrome
           executor: with-chrome

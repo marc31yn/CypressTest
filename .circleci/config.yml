@@ -18,10 +18,7 @@ jobs:
       - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
     steps:
       - cypress/setup:
-          build: buil-1
-      - run:
-          command: npm run test:chrome 
-          
+          build: buil-1         
 
           
 workflows:

@@ -13,12 +13,12 @@ executors:
 workflows:
   build:
     jobs:
+        - testOne:
         - cypress/run:
             name: Practices Test Chrome
             command: npm run test:chrome
             executor: with-chrome
             browser: chrome
-        - store_test_results:
-            path: test-results 
+        
       
           

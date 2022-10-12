@@ -17,12 +17,10 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
-      - cypress:
-            command: npm run test:chrome 
-            record: true 
-            browser: chrome             
-            store_artifacts: true 
-            executor: with-chrome     
+      - browserstack-local/start_local:
+          access_key: zusfL5ycq6NzpjaMetsA 
+          force_local: false 
+          force_proxy: false     
           
 workflows:
   example-workflow:

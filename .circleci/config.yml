@@ -14,15 +14,12 @@ workflows:
     example-workflow:
       jobs:
         - cypress/run:
+            command: npm run test:chrome
             record: true 
-            parallel: true 
-            parallelism: 2 
-            browser: chrome 
-            command: npm run test:chrome 
+            browser: chrome              
             store_artifacts: false 
             yarn: false 
             attach-workspace: false 
             no-workspace: false 
-            component: false 
             executor: with-chrome       
 

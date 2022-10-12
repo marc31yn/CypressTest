@@ -21,5 +21,7 @@ workflows:
             parallelism: 2 
             browser: chrome              
             store_artifacts: false 
-            executor: with-chrome       
+            executor: with-chrome 
+            group: Tests-UI 
+            build: buil-practice
 

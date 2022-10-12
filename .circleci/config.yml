@@ -13,6 +13,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: npm run test:chrome
-          executor: with-chrome
-          browser: chrome
+          command: cypress:browserstack

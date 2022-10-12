@@ -13,11 +13,10 @@ executors:
 
           
 workflows:
-  example-workflow:
-    jobs:
+    example-workflow:
+      jobs:
         - browserstack-local/BrowserStack Local Start:
             access_key: zusfL5ycq6NzpjaMetsA 
-            executor: with-chrome  
-            steps: npm run cypress:browserstack
+            steps: npm run cypress:browserstack 
             
 

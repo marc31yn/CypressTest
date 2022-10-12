@@ -13,8 +13,9 @@ executors:
 workflows:
   build:
     jobs:
+    test:
       - cypress/run:
-          name: Build the Jekyll site
+          name: Practices Test Chrome
           command: npm run test:chrome
           executor: with-chrome
           browser: chrome     

@@ -16,9 +16,10 @@ jobs:
     jobs:
         - browserstack-local/BrowserStack Local Start:
             access_key: zusfL5ycq6NzpjaMetsA 
-            steps: 
-            command: npm run cypress:browserstack
-            executor: with-chrome 
+            steps: npm run cypress:browserstack  
+            force_local: false 
+            force_proxy: false 
+            executor: with-chrome   
   
           
 workflows:

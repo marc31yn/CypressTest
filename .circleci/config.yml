@@ -8,4 +8,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          start: npx cypress run --headed --browser - chrome --spec 'cypress/e2e/pom/homeSauce.cy.js'
+          command: npx cypress run --headed --browser chrome --spec 'cypress/e2e/pom/homeSauce.cy.js'

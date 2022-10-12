@@ -14,6 +14,8 @@ workflows:
     practice-workflow:
       jobs:
         - cypress/run:
+            post-install:
+            - run: npm install -g browserstack-cypress-cli
             name: RunTest-cypress
             command: npm run test:chrome 
             record: true 

@@ -8,18 +8,13 @@ orbs:
 executors:
   with-chrome:
     docker:
-      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
-      
-jobs:
-  practice-cypress:   
-    steps:
-      - cypress/run:
-            command: npm run test:chrome
-            executor: 
-              - with-chrome
-            browser: chrome
+      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'      
       
 workflows:
-    test-practice:
+  build:
     jobs:
-      - practice-cypress
+        - cypress/run:
+            name: Practices Test Chrome
+            command: npm run test:chrome
+            executor: with-chrome
+            browser: chrome

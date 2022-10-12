@@ -17,8 +17,14 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
-      - browserstack-local/start_local:
-          access_key: zusfL5ycq6NzpjaMetsA 
+      - cypress/run:
+            name: RunTest-cypress
+            command: npm run test:chrome 
+            record: true 
+            browser: chrome             
+            store_artifacts: true 
+            executor: with-chrome     
+          
 workflows:
   example-workflow:
     jobs:

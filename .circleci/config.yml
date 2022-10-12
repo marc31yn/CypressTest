@@ -16,5 +16,10 @@ workflows:
       - cypress/run:
           command: npm run test:chrome
           executor: with-chrome
+          browser: chrome       
+      - cypress/run:
+          command: npm run test:chrome
+          executor: with-chrome
           browser: chrome 
+      
           

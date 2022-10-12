@@ -26,9 +26,19 @@ workflows:
         - cypress/run:
             post-install:
             - run: npm install -g browserstack-cypress-cli
-            name: RunTest-cypress2
+            name: RunTest-chrome
             command: npm run test:chrome
             record: true 
             browser: chrome             
             store_artifacts: true 
-            executor: with-chrome       
+            executor: with-chrome
+        
+        - cypress/run:
+            post-install:
+            - run: npm install -g browserstack-cypress-cli
+            name: RunTest-API
+            command: npm run test:api
+            record: true 
+            browser: chrome             
+            store_artifacts: true 
+            executor: with-chrome  

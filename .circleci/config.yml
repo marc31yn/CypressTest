@@ -19,16 +19,12 @@ jobs:
     steps:
       - cypress/setup:
           build: buil-1
-      - cypress/run:
-            name: RunTest-cypress
-            command: npm run test:chrome 
-            record: true     
 
           
 workflows:
     practice-workflow:
       jobs:
-        - example-job
+        - example-job 
         - cypress/run:
             name: RunTest-cypress
             command: npm run test:chrome 

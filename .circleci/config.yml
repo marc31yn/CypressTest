@@ -11,25 +11,13 @@ executors:
     docker:
       - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
 
-jobs:
-  browserstack-job:
-    jobs:
-        - browserstack-local/BrowserStack Local Start:
-            access_key: zusfL5ycq6NzpjaMetsA 
-            executor: with-chrome 
-            steps: npm run cypress:browserstack   
-  
           
 workflows:
   example-workflow:
     jobs:
-      - browserstack-job
-      - cypress/run:
-            name: RunTest-cypress
-            command: npm run test:chrome 
-            record: true 
-            browser: chrome             
-            store_artifacts: true 
-            executor: with-chrome 
+        - browserstack-local/BrowserStack Local Start:
+            access_key: zusfL5ycq6NzpjaMetsA 
+            executor: with-chrome  
+            steps: npm run cypress:browserstack
             
 

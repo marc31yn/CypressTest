@@ -10,11 +10,9 @@ executors:
     docker:
       - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
 workflows:
+my_workflow:
   build:
     jobs:
-    - build:
-          org_name: Practice
-          repo_name: project1
       - cypress/run:
           command: npm run test:chrome
           executor: with-chrome

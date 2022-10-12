@@ -7,4 +7,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          start: test:chrome
+          start: npm run test:chrome

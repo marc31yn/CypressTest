@@ -17,9 +17,8 @@ workflows:
       jobs:
         - cypress/run:
             name: RunTest-cypress
-            command: npm run test:chrome 
-            record: true 
-            browser: chrome             
+            command: npm run cypress:browserstack
+            record: true           
             store_artifacts: true 
             executor: with-chrome 
             

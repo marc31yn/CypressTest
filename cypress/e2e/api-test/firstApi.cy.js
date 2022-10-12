@@ -101,8 +101,8 @@ describe('API TESTING PRACTICE - First Section', () => {
     it('Get one Activity', () => {
 
         let resource = 'api/v1/Activities';
-        let numRandom = randomNum(0, idsSaved.length - 1)
-        let idRandom = idsSaved.at(numRandom)
+        let numRandom = randomNum(0, idsSaved.length - 1);
+        const idRandom = idsSaved[numRandom]
         cy.log('Random number: '+numRandom)
 
 

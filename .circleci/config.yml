@@ -3,15 +3,8 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@2.2.0
-
-jobs:
-  deploy-step-job:   
-    steps:
-      - run:
-          name: "Practice Circle"
-          command: "npm run test:chrome"
-
+      
 workflows:
-  deploy-step-workflow:
+  build:
     jobs:
-      - deploy-step-job
+      - cypress/run: "npm run test:chrome"

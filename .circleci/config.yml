@@ -22,3 +22,13 @@ workflows:
             browser: chrome             
             store_artifacts: true 
             executor: with-chrome 
+      jobs:
+        - cypress/run:
+            post-install:
+            - run: npm install -g browserstack-cypress-cli
+            name: RunTest-cypress2
+            command: npm run test:chrome
+            record: true 
+            browser: chrome             
+            store_artifacts: true 
+            executor: with-chrome       

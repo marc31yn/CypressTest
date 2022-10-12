@@ -13,4 +13,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: cypress:browserstack
+          command: npm run cypress:browserstack

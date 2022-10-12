@@ -14,14 +14,16 @@ workflows:
     practice-workflow:
       jobs:
         - cypress/run:
-            command: npm run test:chrome
-            store_artifacts: true 
             record: true 
             parallel: true 
             parallelism: 2 
-            browser: chrome              
-            store_artifacts: false 
+            browser: chrome 
+            command: npm run test:chrome 
+            store_artifacts: true 
+            yarn: true 
+            attach-workspace: false 
+            no-workspace: false 
+            component: false 
             executor: with-chrome 
-            group: Tests-UI 
-            build: buil-practice
+            build: buil-test 
 

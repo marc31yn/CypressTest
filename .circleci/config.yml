@@ -19,6 +19,7 @@ jobs:
             browser: chrome
             
 workflows:
+  my-custom-workflow:
     jobs:
       - seconde-job 
         

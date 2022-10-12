@@ -16,7 +16,7 @@ jobs:
       - cypress/run:
             command: npm run test:chrome
             executor: 
-              -with-chrome
+              - with-chrome
             browser: chrome
       
 workflows:

@@ -22,7 +22,7 @@ workflows:
             browser: chrome             
             store_artifacts: true 
             executor: with-chrome 
-      jobs:
+      
         - cypress/run:
             post-install:
             - run: npm install -g browserstack-cypress-cli

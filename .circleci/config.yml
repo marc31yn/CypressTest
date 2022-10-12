@@ -8,4 +8,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: browserstack-cypress run --sync --spec cypress/e2e/pom/homeSauce.cy.js
+          command: npm run test:chrome

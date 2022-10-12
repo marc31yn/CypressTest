@@ -2,15 +2,14 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@2.2.0
+  cypress: wealthforge/cypress@1.0.0
   node: circleci/node@5.0.2
   browserstack-local: shawnlobo96/browserstack-local@1.0.0
   
 executors:
   with-chrome:
     docker:
-      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
-          
+      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'         
 
           
 workflows:

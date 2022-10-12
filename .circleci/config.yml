@@ -18,7 +18,6 @@ jobs:
       - image: cimg/base:stable
     steps:
       - cypress/run:
-            name: RunTest-cypress
             command: npm run test:chrome 
             record: true 
             browser: chrome             

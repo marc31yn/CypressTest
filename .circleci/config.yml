@@ -17,10 +17,7 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
-      - browserstack-local/start_local:
-          access_key: zusfL5ycq6NzpjaMetsA 
-          force_local: false 
-          force_proxy: false     
+      - browserstack-local/download   
           
 workflows:
   example-workflow:

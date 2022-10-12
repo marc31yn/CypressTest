@@ -17,7 +17,6 @@ workflows:
     practice-workflow:
       jobs:
         - cypress/install:
-            yarn: false 
             install-command: npm install -g browserstack-cypress-cli
         - cypress/run:
             name: RunTest-cypress

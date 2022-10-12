@@ -16,11 +16,9 @@ jobs:
       -with-chrome
     steps:
       - cypress/run:
-            name: Practices Test Chrome
             command: npm run test:chrome
             browser: chrome
       
 workflows:
-  test_my_app:
     jobs:
       - practice-cypress

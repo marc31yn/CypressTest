@@ -12,12 +12,12 @@ executors:
             
 jobs:
   seconde-job:
+    executor: with-chrome
     steps:
       - cypress/run:
-            name: Practices Test Chrome
-            command: npm run test:chrome
-            executor: with-chrome
+            command: npm run test:chrome            
             browser: chrome
+            
 workflows:
   my-custom-workflow:
     jobs:

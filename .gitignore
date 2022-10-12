@@ -1,2 +1,4 @@
 log/
 results/
+cypress/report/
+cypress/videos/

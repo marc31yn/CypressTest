@@ -19,5 +19,4 @@ workflows:
             browser: chrome             
             store_artifacts: true 
             executor: with-chrome 
-            build: buil-test 
 

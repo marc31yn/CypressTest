@@ -12,13 +12,14 @@ executors:
       
 jobs:
   practice-cypress:
-    executor: 
-      -with-chrome
+   
     steps:
       - cypress/run:
             command: npm run test:chrome
+             executor: with-chrome
             browser: chrome
       
 workflows:
+    test-practice:
     jobs:
       - practice-cypress

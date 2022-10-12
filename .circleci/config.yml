@@ -14,7 +14,7 @@ workflows:
     practice-workflow:
       jobs:
         - cypress/run:
-            name: Run test in cypress
+            name: RunTest-cypress
             command: npm run test:chrome 
             record: true 
             browser: chrome             

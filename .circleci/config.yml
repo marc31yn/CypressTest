@@ -36,7 +36,7 @@ workflows:
         - cypress/run:
             post-install:
             - run: npm install -g browserstack-cypress-cli
-            name: RunTest-API
+            name: RunTest-APIs
             command: npm run test:api
             record: true 
             browser: chrome             

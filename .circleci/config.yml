@@ -5,12 +5,15 @@ orbs:
   cypress: cypress-io/cypress@2.2.0
   node: circleci/node@5.0.2
   
-jobs:
-  test:
-      - run:
-          command: npm run test:chrome
+executors:
+  with-chrome:
+    docker:
+      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
 workflows:
-  test_my_app:
+  build:
     jobs:
-      - test
+      - cypress/run:
+          command: npm run test:chrome
+          executor: with-chrome
+          browser: chrome
           

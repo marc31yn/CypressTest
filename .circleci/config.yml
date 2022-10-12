@@ -16,6 +16,7 @@ workflows:
         - cypress/run:
             name: Test UI on chrome 
             command: npm run test:chrome
+            store_artifacts: true 
             record: true 
             parallel: true 
             parallelism: 2 

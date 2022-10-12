@@ -7,7 +7,6 @@ orbs:
 jobs:
   deploy-step-job:   
     steps:
-      - checkout
       - run:
           name: "Practice Circle"
           command: "npm run test:chrome"

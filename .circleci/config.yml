@@ -17,6 +17,8 @@ workflows:
             name: Practices Test Chrome
             command: npm run test:chrome
             executor: with-chrome
-            browser: chrome     
+            browser: chrome
+        - store_test_results:
+            path: test-results 
       
           

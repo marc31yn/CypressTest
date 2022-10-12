@@ -9,22 +9,15 @@ orbs:
 executors:
   with-chrome:
     docker:
-      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'         
+      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'        
       
-jobs:
-  example-job:
-    docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
-      - cypress/install:
-          command: npm install -g browserstack-cypress-cli
 
           
 workflows:
     practice-workflow:
       jobs:
-        - example-job
+        - cypress/install:
+          command: npm install -g browserstack-cypress-cli
         - cypress/run:
             name: RunTest-cypress
             command: npm run cypress:browserstack

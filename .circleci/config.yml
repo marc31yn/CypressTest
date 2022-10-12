@@ -7,4 +7,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          start: npm run cypress:browserstack
+          start: test:chrome

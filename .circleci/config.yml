@@ -17,7 +17,7 @@ workflows:
             post-install:
             - run: npm install -g browserstack-cypress-cli
             name: RunTest-cypress
-            command: npm run test:chrome 
+            command: npm run cypress:browserstack
             record: true 
             browser: chrome             
             store_artifacts: true 

@@ -16,8 +16,6 @@ workflows:
         - cypress/run:
             command: npm run test:chrome 
             record: true 
-            parallel: true 
-            parallelism: 2 
             browser: chrome             
             store_artifacts: true 
             executor: with-chrome 

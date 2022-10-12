@@ -3,37 +3,16 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@2.2.0
-            - cypress/run
 
 jobs:
-  build:
-    docker:
-      - image: cimg/node:16.14.2
-
-    working_directory: ~/repo
-
+  deploy-step-job:   
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: npm ci
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # we need to install CircleCI CLI tool
-      # to run the "manual" tests
-      - circleci-cli/install
-      - run: npm run test:chrome
+      - run:
+          name: "Practice Circle"
+          command: "npm run test:chrome"
 
 workflows:
+  deploy-step-workflow:
     jobs:
-      - build
+      - deploy-step-job

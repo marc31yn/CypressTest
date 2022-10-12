@@ -12,6 +12,9 @@ executors:
 workflows:
   build:
     jobs:
+    - build:
+          org_name: Practice
+          repo_name: project1
       - cypress/run:
           command: npm run test:chrome
           executor: with-chrome

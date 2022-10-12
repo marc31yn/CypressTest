@@ -11,12 +11,11 @@ executors:
       - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
       
 jobs:
-  practice-cypress:
-   
+  practice-cypress:   
     steps:
       - cypress/run:
             command: npm run test:chrome
-             executor: with-chrome
+            executor: -with-chrome
             browser: chrome
       
 workflows:

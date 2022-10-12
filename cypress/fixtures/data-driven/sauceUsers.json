@@ -1,0 +1,9 @@
+
+    {
+        "name": "Standard_user",
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expected": "Products",
+        "error_message" : "Epic sadface"
+
+    }

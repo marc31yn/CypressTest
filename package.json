@@ -1,0 +1,29 @@
+{
+  "name": "tuto_cy",
+  "version": "1.0.0",
+  "description": "Este un tutorial de cyrpe framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open",
+    "cypress:chrome": "cypress run --browser chrome",
+    "cypress:retryA": "cypress run --spec cypress/e2e/retry-ability.cy.js",
+    "chrome:headless": "npx cypress run --headless --browser chrome --spec 'cypress/e2e/pom/homeSauce.cy.js' --record --key 1e4341a8-4484-4bf9-b444-cad331787de0",
+    "test:chrome": "npx cypress run --headed --browser chrome --spec 'cypress/e2e/pom/homeSauce.cy.js'",
+    "test:firefox": "npx cypress run --headed --browser firefox --spec 'cypress/e2e/pom/homeSauce.cy.js'",
+    "cypress:browserstack" : "browserstack-cypress run --sync --spec cypress/e2e/pom/homeSauce.cy.js"
+  },
+  "keywords": [
+    "e2e",
+    "automation",
+    "framework",
+    "cypress"
+  ],
+  "author": "Marcela",
+  "license": "ISC",
+  "devDependencies": {
+    "ajv": "^8.11.0",
+    "cypress": "^10.9.0",
+    "cypress-mochawesome-reporter": "^3.2.3"
+  }
+}

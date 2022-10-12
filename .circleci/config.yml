@@ -11,14 +11,14 @@ executors:
       - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
             
 jobs:
-  seconde-job:   
+  seconde-job:
+      executor: with-chrome
+      steps:
       - cypress/run:
-            command: npm run test:chrome
-            executor: with-chrome
+            command: npm run test:chrome            
             browser: chrome
             
 workflows:
-  my-custom-workflow:
     jobs:
       - seconde-job 
         

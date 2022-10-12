@@ -11,7 +11,9 @@
     "chrome:headless": "npx cypress run --headless --browser chrome --spec 'cypress/e2e/pom/homeSauce.cy.js' --record --key 1e4341a8-4484-4bf9-b444-cad331787de0",
     "test:chrome": "npx cypress run --headed --browser chrome --spec 'cypress/e2e/pom/homeSauce.cy.js'",
     "test:firefox": "npx cypress run --headed --browser firefox --spec 'cypress/e2e/pom/homeSauce.cy.js'",
-    "cypress:browserstack" : "browserstack-cypress run --sync --spec cypress/e2e/pom/homeSauce.cy.js"
+    "cypress:browserstack" : "browserstack-cypress run --sync --spec cypress/e2e/pom/homeSauce.cy.js",
+    "test:api" : "npx cypress run --headed --browser chrome --spec cypress/e2e/api-test/firstApi.cy.js"
+    
   },
   "keywords": [
     "e2e",
